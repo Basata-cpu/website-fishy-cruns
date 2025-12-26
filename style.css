@@ -1,0 +1,277 @@
+/* =========================================
+   1. PENGATURAN DASAR (RESET)
+   ========================================= */
+body {
+  font-family: Arial, sans-serif; /* Jenis font standar */
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9; /* Warna latar belakang website agak abu muda */
+  line-height: 1.6;
+}
+
+/* =========================================
+   2. NAVBAR (MENU ATAS)
+   ========================================= */
+nav {
+  background-color: #0077b6; /* Warna Biru Laut */
+  color: white;
+  padding: 15px 20px;
+  display: flex; /* Agar logo dan menu sejajar kiri-kanan */
+  justify-content: space-between;
+  align-items: center;
+  position: sticky; /* (Opsional) Agar menu tetap di atas saat discroll */
+  top: 0;
+  z-index: 100;
+}
+
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Jarak antar menu */
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ff9f1c; /* Berubah oranye saat disorot */
+}
+
+/* =========================================
+   3. HERO SECTION (TAMPILAN UTAMA)
+   ========================================= */
+.hero {
+  /* Background Foto dengan Lapisan Gelap (Overlay) */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(image.jpg/bg-hero.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  text-align: center;
+  padding: 150px 20px; /* Tinggi Hero */
+  color: white;
+  /* --- HERO KECIL (Untuk Halaman Produk & Kontak) --- */
+  .hero-kecil {
+    /* Menggunakan gambar background yang sama dengan Beranda */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url("images/bg-hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    text-align: center;
+    padding: 80px 20px; /* Lebih pendek daripada Hero utama (150px vs 80px) */
+    color: white;
+    margin-bottom: 30px; /* Memberi jarak dengan konten di bawahnya */
+  }
+
+  .hero-kecil h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+}
+/* --- HERO KECIL (Untuk Halaman Produk & Kontak) --- */
+.hero-kecil {
+  /* Menggunakan gambar background yang sama dengan Beranda */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("images/bg-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  text-align: center;
+  padding: 80px 20px; /* Lebih pendek daripada Hero utama (150px vs 80px) */
+  color: white;
+  margin-bottom: 30px; /* Memberi jarak dengan konten di bawahnya */
+}
+
+.hero-kecil h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Bayangan tulisan */
+}
+
+.hero p {
+  font-size: 1.3rem;
+  color: #eee;
+  margin-bottom: 40px;
+}
+
+/* Gambar Hero (Khusus jika ada gambar produk di tengah Hero) */
+.gambar-hero {
+  width: 250px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* =========================================
+   4. TOMBOL (BUTTON)
+   ========================================= */
+.btn-beli {
+  background-color: #ff9f1c; /* Oranye */
+  color: white;
+  padding: 15px 35px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+  /* Trik agar tulisan tombol pas di tengah */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 160px;
+}
+
+.btn-beli:hover {
+  background-color: #e08e0b; /* Warna lebih gelap saat disentuh */
+  transform: scale(1.05); /* Membesar sedikit */
+}
+
+/* =========================================
+   5. HALAMAN PRODUK (KARTU)
+   ========================================= */
+.area-produk {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.area-produk h2 {
+  color: #333;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+/* Wadah Kotak Produk */
+.wadah-produk {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; /* Agar turun ke bawah kalau layar sempit */
+}
+
+/* Kartu Satuan */
+.kartu {
+  background-color: white;
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 15px;
+  width: 280px; /* Lebar kartu */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Bayangan halus */
+  transition: 0.3s;
+}
+
+.kartu:hover {
+  transform: translateY(-10px); /* Naik saat disorot */
+  border-color: #ff9f1c;
+}
+
+/* Gambar di dalam Kartu Produk */
+.gambar-produk-kecil {
+  width: 100%;
+  height: 200px; /* Tinggi seragam */
+  object-fit: cover; /* Agar gambar tidak gepeng */
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.kartu h3 {
+  color: #0077b6;
+  margin-bottom: 10px;
+}
+
+/* =========================================
+   6. HALAMAN KONTAK
+   ========================================= */
+.area-kontak {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  min-height: 60vh; /* Agar footer tidak naik ke tengah layar */
+}
+
+.kotak-kontak {
+  background-color: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+.info-item {
+  margin-top: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.info-item h3 {
+  color: #0077b6;
+  margin-bottom: 5px;
+}
+
+/* =========================================
+   7. FOOTER (KAKI WEBSITE)
+   ========================================= */
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  margin-top: auto; /* Mendorong footer ke paling bawah */
+}
+
+/* =========================================
+   8. RESPONSIF (UNTUK HP)
+   ========================================= */
+@media screen and (max-width: 768px) {
+  /* Navbar jadi vertikal */
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* Tulisan Hero mengecil */
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  /* Produk berjejer ke bawah */
+  .wadah-produk {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .kartu {
+    width: 100%;
+    max-width: 350px;
+  }
+}
